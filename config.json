@@ -1,0 +1,12 @@
+{
+    "region": "eu-west-1",
+    "emailTo": "me@example.com",
+    "emailFrom": "no-reply@example.com",
+    "url": "example.com",
+    "emailSubject": "example.com IP address change",
+    "emailBody": "The IP address for {$URL} has changed\n\n From: {$LastIPs} \n\n To: {$CurrentIPs} \n\n Message generated automatically using AWS Lambda.",
+    "lastIP": {
+        "0": "0.0.0.0",
+        "1": "1.1.1.1"
+    }
+}
