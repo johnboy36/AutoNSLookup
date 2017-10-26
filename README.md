@@ -31,10 +31,10 @@ AWS's IP model is great if you don't care what IP address your website or servic
     ]
 }
 
-. Create an S3 bucket and upload your JSON configuration file
+3. Create an S3 bucket and upload your JSON configuration file
 
-. Paste or upload a .zip of the index.js file, make sure var mybucket is set to your S3 bucket.
+4. Paste or upload a .zip of the index.js file, make sure var mybucket is set to your S3 bucket.
 
-. Add a Trigger. 
+5. Add a Trigger. 
 	Choose type = CloudWatch Events.
 	Create a new rule, Call it HourlySchedule. Use the schedule expression "rate(1 hour)"
