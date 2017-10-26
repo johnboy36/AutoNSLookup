@@ -1,11 +1,11 @@
 # AutoNSLookup
 
-AWS's IP model is great if you don't care what IP address your website or service is on. However, many networks still require an IP address for whitelisting on the firewall, even for outgoing connections. AutoNSLookup runs on an hourly schedule, it monitors the IP4 address associated with a given URL and sends a message to an email address if one or more of the addresses changes. This can be sent on to network admins who can make necessary adjustments to the firewall whitelist.
+AWS's IP model is great if you don't care what IP address your website or service is on. However, many networks still require an IP address for whitelisting on the firewall, even for outgoing connections. AutoNSLookup is a function for AWS Lambda written in node.js. It runs on an hourly schedule and monitors the IP4 address associated with a given URL and sends a message to an email address if one or more of the addresses changes. This can be sent on to network admins who can make necessary adjustments to the firewall whitelist.
 
 
 # Installation
 
-1. Create a new Lanmda Function choosing 'Author from scratch'. 
+1. Create a new Lambda Function choosing 'Author from scratch'. 
 
 2. Create a new Execution Role, grant the following permissions
 
