@@ -1,5 +1,13 @@
 # AutoNSLookup
-Auto NS Lookup
+
+AWS's IP model is great if you don't care what IP address your website or service is on. However, many networks still require an IP address for whitelisting on the firewall, even for outgoing connections. AutoNSLookup runs on an hourly schedule, it monitors the IP4 address associated with a given URL and sends a message to an email address if one or more of the addresses changes. This can be sent on to network admins who can make necessary adjustments to the firewall whitelist.
+
+
+# Installation
+
+1. Create a new Lanmda Function choosing 'Author from scratch'. 
+
+2. Create a new Execution Role, grant the following permissions
 
 {
     "Version": "2012-10-17",
@@ -22,3 +30,11 @@ Auto NS Lookup
         }
     ]
 }
+
+. Create an S3 bucket and upload your JSON configuration file
+
+. Paste or upload a .zip of the index.js file, make sure var mybucket is set to your S3 bucket.
+
+. Add a Trigger. 
+	Choose type = CloudWatch Events.
+	Create a new rule, Call it HourlySchedule. Use the schedule expression "rate(1 hour)"
